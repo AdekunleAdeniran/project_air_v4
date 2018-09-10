@@ -16,7 +16,6 @@ $(function () {
 
   .get('http://0.0.0.0:5001/api/v1/status/', function(data, textStatus)
     {
-      alert("Done, with the following status: " + textStatus + ". Here is the response: " + data);
       if(textStatus == 'success') {
         $(div#api_status).addClass('available');
       } else {
