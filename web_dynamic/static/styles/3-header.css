@@ -13,10 +13,14 @@ header {
 	border-bottom: 1px solid #CCCCCC;
 }
 #api_status {
-    margin-right: 30px;
-    border-color: #CCCCCC;
+    float: right;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
     height: 40px;
     width: 40px;
+    background-color: #CCCCCC;
 }
 
 #api_status.available {
