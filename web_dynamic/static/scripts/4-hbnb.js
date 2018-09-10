@@ -15,7 +15,7 @@ window.onload = function () {
     }
   });
 
-  $.get('http://localhost:5001/api/v1/status/', function (data, textStatus) {
+  $.get('http://0.0.0.0:5001/api/v1/status/', function (data, textStatus) {
     if (textStatus === 'success') {
       $('div#api_status').addClass('available');
     } else {
@@ -25,7 +25,7 @@ window.onload = function () {
 
   function getPlaces(newData={}){
     $.ajax({
-    url: 'http://localhost:5001/api/v1/places_search/',
+    url: 'http://0.0.0.0:5001/api/v1/places_search/',
     type: 'POST',
     data: JSON.stringify(newData),
     dataType: 'json',
@@ -64,7 +64,7 @@ window.onload = function () {
       });
     };
     getPlaces({});
-    
+
   $('button').on('click', function (){
     let filterDict = {};
     filterDict['amenities'] = Object.keys(amenityDict);
