@@ -22,10 +22,11 @@ window.onload = function () {
     }
   });
 
-  $.ajax({
+  function getPlaces(newData={}){
+    $.ajax({
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
     type: 'POST',
-    data: '{}',
+    data: JSON.stringify(newData),
     dataType: 'json',
     contentType: 'application/json',
     success: function (data) {
@@ -56,8 +57,17 @@ window.onload = function () {
               place.description +
               '</div>' +
               '</article>'
-        );
+            );
+          });
+        }
       });
-    }
+    };
+    getPlaces({});
+
+  $('button').on('click', function (){
+    let filterDict = {};
+    filterDict['amenities'] = Object.keys(amenityDict);
+    $('section.places').empty();
+    getPlaces(filterDict);
   });
 };
