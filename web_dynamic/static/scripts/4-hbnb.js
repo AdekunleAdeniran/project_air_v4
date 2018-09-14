@@ -1,6 +1,5 @@
 window.onload = function () {
   let amenityDict = {};
-  let tempDict = {};
   $('input[type=checkbox]').change(function () {
     if (this.checked) {
       amenityDict[$(this).data('id')] = $(this).data('name');
