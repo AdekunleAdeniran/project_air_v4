@@ -105,7 +105,7 @@ the datbase.
   the other function to deploy the compressed web static files.  Command must
   be executed from the `AirBnB_clone` root directory.
 
-  * Usage: `$ fab -f 3-deploy_web_static.py deploy -i ~/.ssh/holberton -u ubuntu`
+  * Usage: `$ fab -f 3-deploy_web_static.py deploy -i ~/.ssh/notrebloh -u ubuntu`
 
 ## Testing
 
